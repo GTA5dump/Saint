@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Windows.CppWinRT.2.0.220531.1\build\native\Microsoft.Windows.CppWinRT.props" Condition="Exists('..\packages\Microsoft.Windows.CppWinRT.2.0.220531.1\build\native\Microsoft.Windows.CppWinRT.props')" />
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseDEV|x64">
+      <Configuration>ReleaseDEV</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="All Players.h" />
+    <ClInclude Include="BoolWithChoose.h" />
+    <ClInclude Include="BoolWithNumber.hpp" />
+    <ClInclude Include="Bypass Max Speed.h" />
+    <ClInclude Include="Caller.h" />
+    <ClInclude Include="Chat Commands.h" />
+    <ClInclude Include="Classes.h" />
+    <ClInclude Include="ClassHelper.h" />
+    <ClInclude Include="ColorSubmenu.hpp" />
+    <ClInclude Include="Common.hpp" />
+    <ClInclude Include="CrossMap.hpp" />
+    <ClInclude Include="CustomText.hpp" />
+    <ClInclude Include="D3DRenderer.hpp" />
+    <ClInclude Include="DatBitBuffer.h" />
+    <ClInclude Include="Disassembler.h" />
+    <ClInclude Include="Discord\DiscordHandler.hpp" />
+    <ClInclude Include="Discord\Discord_Register.h" />
+    <ClInclude Include="Discord\Discord_RPC.h" />
+    <ClInclude Include="drawingFunctions2.h" />
+    <ClInclude Include="EntityPool.h" />
+    <ClInclude Include="Enums.h" />
+    <ClInclude Include="Exception.h" />
+    <ClInclude Include="Explode.h" />
+    <ClInclude Include="fa_solid_900.h" />
+    <ClInclude Include="Features.h" />
+    <ClInclude Include="FiberHelper.hpp" />
+    <ClInclude Include="Flash Blip.h" />
+    <ClInclude Include="font_awesome.h" />
+    <ClInclude Include="HeaderFontData.h" />
+    <ClInclude Include="hex_memory.h" />
+    <ClInclude Include="Hooks.h" />
+    <ClInclude Include="HotkeyOption.hpp" />
+    <ClInclude Include="Hotkeys.h" />
+    <ClInclude Include="Images.h" />
+    <ClInclude Include="Jets.h" />
+    <ClInclude Include="json.h" />
+    <ClInclude Include="Keyboard.hpp" />
+    <ClInclude Include="Kick.h" />
+    <ClInclude Include="LuaFunctions.h" />
+    <ClInclude Include="Math.h" />
+    <ClInclude Include="MemoryEdit.h" />
+    <ClInclude Include="Notifications.h" />
+    <ClInclude Include="OptionDrawers.h" />
+    <ClInclude Include="OTR.h" />
+    <ClInclude Include="Players.h" />
+    <ClInclude Include="PlayerSub.hpp" />
+    <ClInclude Include="Protections.h" />
+    <ClInclude Include="Queue.h" />
+    <ClInclude Include="Render.h" />
+    <ClInclude Include="ScriptEventClasses.h" />
+    <ClInclude Include="ScriptLocal.h" />
+    <ClInclude Include="Selected.h" />
+    <ClInclude Include="Signatures.hpp" />
+    <ClInclude Include="Hooking.hpp" />
+    <ClInclude Include="ImGui\imconfig.h" />
+    <ClInclude Include="ImGui\imgui.h" />
+    <ClInclude Include="ImGui\imgui_impl_dx11.h" />
+    <ClInclude Include="ImGui\imgui_impl_win32.h" />
+    <ClInclude Include="ImGui\imgui_internal.h" />
+    <ClInclude Include="ImGui\imstb_rectpack.h" />
+    <ClInclude Include="ImGui\imstb_textedit.h" />
+    <ClInclude Include="ImGui\imstb_truetype.h" />
+    <ClInclude Include="Invoker.hpp" />
+    <ClInclude Include="Lists.hpp" />
+    <ClInclude Include="Logger.hpp" />
+    <ClInclude Include="LogScript.hpp" />
+    <ClInclude Include="Script.h" />
+    <ClInclude Include="Memory.hpp" />
+    <ClInclude Include="NativeHook.hpp" />
+    <ClInclude Include="Natives.hpp" />
+    <ClInclude Include="Script.hpp" />
+    <ClInclude Include="ScriptCallback.hpp" />
+    <ClInclude Include="ScriptGlobal.hpp" />
+    <ClInclude Include="ScriptHook.hpp" />
+    <ClInclude Include="ScriptManager.hpp" />
+    <ClInclude Include="Settings.hpp" />
+    <ClInclude Include="Spoofing.h" />
+    <ClInclude Include="stb_image.h" />
+    <ClInclude Include="Timer.hpp" />
+    <ClInclude Include="Translation.hpp" />
+    <ClInclude Include="Types.hpp" />
+    <ClInclude Include="UI\OptionBase.hpp" />
+    <ClInclude Include="UI\OptionGetters.hpp" />
+    <ClInclude Include="UI\SubmenuGetters.hpp" />
+    <ClInclude Include="UI\BoolOption.hpp" />
+    <ClInclude Include="UI\ChooseOption.hpp" />
+    <ClInclude Include="UI\NumberOption.hpp" />
+    <ClInclude Include="UI\PlayerSubmenu.hpp" />
+    <ClInclude Include="UI\RegularOption.hpp" />
+    <ClInclude Include="UI\SubmenuBase.hpp" />
+    <ClInclude Include="UI\RegularSubmenu.hpp" />
+    <ClInclude Include="UI\SubOption.hpp" />
+    <ClInclude Include="UI\TextBox.hpp" />
+    <ClInclude Include="UI\Framework.hpp" />
+    <ClInclude Include="UI\UnclickOption.hpp" />
+    <ClInclude Include="Util.hpp" />
+    <ClInclude Include="VectorLists.h" />
+    <ClInclude Include="Vehicle.h" />
+    <ClInclude Include="VMTHook.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ClassHelper.cpp" />
+    <ClCompile Include="Common.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseDEV|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="CrossMap.cpp" />
+    <ClCompile Include="CustomText.cpp" />
+    <ClCompile Include="D3DRenderer.cpp" />
+    <ClCompile Include="Discord\Discord.cpp" />
+    <ClCompile Include="hex_memory.cpp" />
+    <ClCompile Include="md5.cpp" />
+    <ClCompile Include="Render.cpp" />
+    <ClCompile Include="ScriptGlobal.cpp" />
+    <ClCompile Include="ScriptLocal.cpp" />
+    <ClCompile Include="Signatures.cpp" />
+    <ClCompile Include="Hooking.cpp" />
+    <ClCompile Include="ImGui\imgui.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='ReleaseDEV|x64'">%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_demo.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='ReleaseDEV|x64'">%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_draw.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='ReleaseDEV|x64'">%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_impl_dx11.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='ReleaseDEV|x64'">%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_impl_win32.cpp" />
+    <ClCompile Include="ImGui\imgui_tables.cpp" />
+    <ClCompile Include="ImGui\imgui_widgets.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='ReleaseDEV|x64'">%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="Invoker.cpp" />
+    <ClCompile Include="Logger.cpp" />
+    <ClCompile Include="LogScript.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="NativeHook.cpp" />
+    <ClCompile Include="ScriptCallback.cpp" />
+    <ClCompile Include="ScriptHook.cpp" />
+    <ClCompile Include="ScriptManager.cpp" />
+    <ClCompile Include="Script.cpp" />
+    <ClCompile Include="UI\Framework.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="ReturnSpoofer.asm" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{D52E5E73-B8A8-4992-8347-41ABE83D4991}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>BigBase</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Source</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <SpectreMitigation>false</SpectreMitigation>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <SpectreMitigation>false</SpectreMitigation>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDEV|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <SpectreMitigation>false</SpectreMitigation>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDEV|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Binaries\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Binaries\$(Configuration)-Intermediates\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Bin\$(Configuration)-Intermediates\</IntDir>
+    <TargetName>$(SolutionName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDEV|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Bin\$(Configuration)-Intermediates\</IntDir>
+    <TargetName>$(SolutionName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;BIGBASE_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <OmitFramePointers>true</OmitFramePointers>
+      <PrecompiledHeaderFile>Common.hpp</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ForcedIncludeFiles>Common.hpp;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>$(SolutionDir)Libraries\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4307</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Libraries\Binaries;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;d3dcompiler.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;BIGBASE_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <OmitFramePointers>true</OmitFramePointers>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PrecompiledHeaderFile>Common.hpp</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ForcedIncludeFiles>Common.hpp;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>$(SolutionDir)Libraries\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4307</DisableSpecificWarnings>
+      <DebugInformationFormat>None</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Libraries\Binaries;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;d3dcompiler.lib;libssl.lib;libcrypto.lib;StackWalker.lib;lua54.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDEV|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;SAINT_RELEASE;DEV;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <OmitFramePointers>true</OmitFramePointers>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PrecompiledHeaderFile>Common.hpp</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <ForcedIncludeFiles>Common.hpp;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>$(SolutionDir)Libraries\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4307</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Libraries\Binaries;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;d3dcompiler.lib;libssl.lib;libcrypto.lib;StackWalker.lib;lua54.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>
